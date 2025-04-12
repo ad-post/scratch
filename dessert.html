@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Random Dessert Generator</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #fff8f0;
+      color: black;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+    #dessertDisplay {
+      font-size: 1.8em;
+      margin: 30px 0;
+      padding: 20px;
+      border-radius: 12px;
+      background: rgb(255, 225, 230);
+      box-shadow: 2px 4px 10px rgba(0,0,0,0.1);
+      min-height: 80px;
+      text-align: center;
+    }
+    button {
+      padding: 12px 25px;
+      font-size: 1.1em;
+      background-color: rgb(255, 144, 179);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    button:hover {
+      background-color: rgb(253, 196, 206);
+    }
+  </style>
+</head>
+<body>
+  <h1>Random Dessert Generator </h1>
+  <div id="dessertDisplay"></div>
+  <button onclick="generateDessert()">Click here!</button>
+
+  <script>
+    const desserts = [
+      "Chocolate Lava Cake",
+      "Strawberry Cheesecake",
+      "Tiramisu",
+      "Lemon Tart",
+      "Apple Pie",
+      "Banana Split",
+      "Macarons",
+      "Brownie Sundae",
+      "Churros with Chocolate Sauce",
+      "Rainbow Sherbet",
+      "Chocolate Chip Cookies",
+      "Peach Cobbler",
+      "Red Velvet Cupcake",
+      "Sprinkle Donut",
+      "Coconut Cream Pie",
+      "Cheesecake",
+      "Ice Cream Sandwich",
+      "Key Lime Pie",
+      "Salted Caramel Pudding"
+    ];
+
+    function generateDessert() {
+      const randomIndex = Math.floor(Math.random() * desserts.length);
+      const dessertDisplay = document.getElementById('dessertDisplay');
+      dessertDisplay.textContent = desserts[randomIndex];
+    }
+  </script>
+</body>
+</html>
